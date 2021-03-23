@@ -2,9 +2,9 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-namespace Core.Character
+namespace Core.Characters
 {
-    public class Enemy : Character
+    public class Enemy : Characters.Character
     {
         [SerializeField] private float _minXPosForSpawn, _maxXPosForSpawn;
 

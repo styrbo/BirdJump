@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Zenject;
 
-namespace Core.Character
+namespace Core.Characters
 {
     public class CharacterFlip : MonoBehaviour
     {

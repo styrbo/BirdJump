@@ -1,4 +1,4 @@
-﻿using Core.Character;
+﻿using Core.Characters;
 using TMPro;
 using UnityEngine;
 using Zenject;

@@ -2,7 +2,7 @@
 using Core.Platforms;
 using UnityEngine;
 
-namespace Core.Character
+namespace Core.Characters
 {
     public class Character : MonoBehaviour
     {

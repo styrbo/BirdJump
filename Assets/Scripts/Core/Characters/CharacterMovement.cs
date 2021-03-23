@@ -4,7 +4,7 @@ using UnityEngine;
 using Zenject;
 using Random = UnityEngine.Random;
 
-namespace Core.Character
+namespace Core.Characters
 {
     public class CharacterMovement : MonoBehaviour
     {

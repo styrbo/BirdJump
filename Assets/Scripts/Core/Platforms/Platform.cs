@@ -1,4 +1,5 @@
 ﻿using System;
+using Core.Characters;
 using UnityEngine;
 
 namespace Core.Platforms
@@ -14,7 +15,7 @@ namespace Core.Platforms
             if(other.enabled == false)
                 return;
             
-            if (other.transform.TryGetComponent(out Character.Character character))
+            if (other.transform.TryGetComponent(out Character character))
             {
                 character.OnTouchToPlatform?.Invoke(this);
             }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using Zenject;
 
-namespace Core.Character
+namespace Core.Characters
 {
     public class CharacterJump : MonoBehaviour
     {
@@ -10,7 +10,7 @@ namespace Core.Character
 
         private int _remainingJumpCount;
         
-        [Inject] private Character _character;
+        [Inject] private Characters.Character _character;
         [Inject] private Rigidbody2D _rb2d;
 
         private bool CanJump => _remainingJumpCount > 0;

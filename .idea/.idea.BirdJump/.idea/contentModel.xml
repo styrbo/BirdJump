@@ -925,7 +925,7 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="Core" t="Include">
-            <e p="Character" t="Include">
+            <e p="Characters" t="Include">
               <e p="Character.cs" t="Include" />
               <e p="CharacterFlip.cs" t="Include" />
               <e p="CharacterJump.cs" t="Include" />

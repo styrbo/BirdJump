@@ -4,10 +4,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Zenject;
 
-namespace Core.Character
+namespace Core.Characters
 {
     [RequireComponent(typeof(Collider2D))]
-    public class Player : Character
+    public class Player : Characters.Character
     {
         public Action<int> OnScoreUpdate;
         
