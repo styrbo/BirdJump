@@ -1,7 +1,6 @@
 ﻿using System;
 using Core.Platforms;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using Zenject;
 
 namespace Core.Characters
@@ -10,8 +9,12 @@ namespace Core.Characters
     public class Player : Character
     {
         public Action<int> OnScoreUpdate;
-        
+        public Action OnDead;
+
+        public bool IsDead { get; private set; }
+
         [Inject] private CharacterJump _jump;
+        [Inject] private CharacterMovement _movement;
 
         private void Awake()
         {
@@ -33,8 +36,10 @@ namespace Core.Characters
         {
             if (other.transform.TryGetComponent(out Enemy enemy))
             {
-                print("restart level");
-                SceneManager.LoadScene(0);
+                OnDead?.Invoke();
+                IsDead = true;
+                
+                _movement.StopMove();
             }
         }
     }

@@ -10,7 +10,7 @@ namespace UI
         
         private void Update()
         {
-            if (Input.GetMouseButtonDown(0))
+            if (Input.GetMouseButtonDown(0) && _player.IsDead == false)
                 _player.Jump();
         }
     }
