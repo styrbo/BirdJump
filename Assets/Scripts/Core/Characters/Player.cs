@@ -7,7 +7,7 @@ using Zenject;
 namespace Core.Characters
 {
     [RequireComponent(typeof(Collider2D))]
-    public class Player : Characters.Character
+    public class Player : Character
     {
         public Action<int> OnScoreUpdate;
         
