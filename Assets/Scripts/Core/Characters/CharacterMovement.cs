@@ -40,6 +40,11 @@ namespace Core.Characters
                 _rb2d = GetComponent<Rigidbody2D>();
         }
 
+        private void Start()
+        {
+            StartMove();
+        }
+
         public void StartMove()
         {
             var randomSide = (Side) Mathf.Pow(-1, Random.Range(1, 3));

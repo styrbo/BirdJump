@@ -11,14 +11,10 @@ namespace Core.Characters
     {
         public Action<int> OnScoreUpdate;
         
-        [Inject] private CharacterMovement _movement;
         [Inject] private CharacterJump _jump;
-        [Inject] private PlatformPool _pool;
 
         private void Awake()
         {
-            _movement.StartMove();
-            
             base.OnTouchToPlatform += OnTouchToPlatform;
         }
 

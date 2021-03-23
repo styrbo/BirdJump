@@ -8,19 +8,7 @@ namespace Core.Characters
     {
         [SerializeField] private float _minXPosForSpawn, _maxXPosForSpawn;
 
-        private CharacterMovement _movement;
         private Platform _platform;
-
-        private void Awake()
-        {
-            _movement = GetComponent<CharacterMovement>();
-        }
-
-        private void Start()
-        {
-            //TODO: нужна фабрика для резолва зависимостей
-           _movement?.StartMove();
-        }
 
         public void AttachOnPlatform(Platform platform)
         {
