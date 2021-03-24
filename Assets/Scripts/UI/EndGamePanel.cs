@@ -1,4 +1,5 @@
-﻿using Core.Characters;
+﻿using System;
+using Core.Characters;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -11,7 +12,7 @@ namespace UI
     public class EndGamePanel : MonoBehaviour
     {
         [SerializeField] private Button _buttonForAnimate;
-        
+
         [Inject] private Player _player;
 
         public bool Active
@@ -25,6 +26,7 @@ namespace UI
         }
 
         private CanvasGroup _group;
+        private Tweener _buttonTweener;
 
         private void Awake()
         {
@@ -35,7 +37,12 @@ namespace UI
 
         private void Start()
         {
-            _buttonForAnimate.transform.DOScale(Vector3.one * 1.1f, 1f).SetLoops(-1, LoopType.Yoyo);
+            _buttonTweener = _buttonForAnimate.transform.DOScale(Vector3.one * 1.1f, 1f).SetLoops(-1, LoopType.Yoyo);
+        }
+
+        private void OnDestroy()
+        {
+            _buttonTweener.Kill();
         }
 
         private void OnDead()
